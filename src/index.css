@@ -167,3 +167,67 @@
   }
 }
 
+/* Fix CSS vendor prefix compatibility warnings */
+@layer base {
+  button,
+  input:where([type=button]),
+  input:where([type=reset]),
+  input:where([type=submit]) {
+    appearance: button;
+  }
+
+  [type=search] {
+    appearance: textfield;
+  }
+
+  ::-webkit-file-upload-button {
+    appearance: button;
+  }
+
+  ::-webkit-search-decoration {
+    appearance: none;
+  }
+
+  progress {
+    vertical-align: middle;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: inline-block;
+  }
+
+  /* Line clamp support */
+  .line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-1 {
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .line-clamp-4 {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+}
+
